@@ -3,57 +3,42 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Alexis Grimaldi</string>
+	<string>Stephan Putzke</string>
+	<key>Builder Version</key>
+	<string>6534.52.7</string>
 	<key>CFBundleDisplayName</key>
-	<string>Open in Papers</string>
+	<string>Open in Super OTR</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.algrimaldi.safari.openinpapers</string>
+	<string>com.apfel-a.safari.openinsuperotr</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2.3</string>
+	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>5.4</string>
+	<string>1.0</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Context Menu Items</key>
 		<array>
 			<dict>
 				<key>Command</key>
-				<string>openInPapersMenu</string>
+				<string>openInSuperOTRMenu</string>
 				<key>Identifier</key>
-				<string>openInPapersMenu</string>
+				<string>openInSuperOTRMenu</string>
 				<key>Title</key>
-				<string>Open page in Papers</string>
+				<string>Open page in Super OTR</string>
 			</dict>
 			<dict>
 				<key>Command</key>
-				<string>openLinkInPapers</string>
+				<string>openLinkInSuperOTR</string>
 				<key>Identifier</key>
-				<string>openLinkInPapers</string>
+				<string>openLinkInSuperOTR</string>
 				<key>Title</key>
-				<string>Open link in Papers</string>
+				<string>Open link in Super OTR</string>
 			</dict>
 		</array>
 		<key>Global Page</key>
 		<string>global.html</string>
-		<key>Toolbar Items</key>
-		<array>
-			<dict>
-				<key>Command</key>
-				<string>openInPapers</string>
-				<key>Identifier</key>
-				<string>openInPapers</string>
-				<key>Image</key>
-				<string>Icon16.png</string>
-				<key>Label</key>
-				<string>Open in Papers</string>
-				<key>Palette Label</key>
-				<string>Open in Papers</string>
-				<key>Tool Tip</key>
-				<string>Open in Papers</string>
-			</dict>
-		</array>
 	</dict>
 	<key>Content</key>
 	<dict>
@@ -79,9 +64,7 @@
 			<string>All</string>
 		</dict>
 	</dict>
-	<key>Update Manifest URL</key>
-	<string>http://dl.dropbox.com/u/2543240/OpenInPapers/manifest.plist</string>
 	<key>Website</key>
-	<string>http://github.com/sopo/OpenInPapers</string>
+	<string>https://github.com/stephan233/OpenInSuperOTR</string>
 </dict>
 </plist>

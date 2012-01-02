@@ -4,53 +4,53 @@ safari.application.addEventListener("message", handleMessage, false);
 
 
 function performCommand(event) {
-  if (event.command === "openInPapers") {
+  if (event.command === "openInSuperOTR") {
     var url = event.target.browserWindow.activeTab.url;
     var title = event.target.browserWindow.activeTab.title;
   }
-  else if (event.command === "openInPapersMenu") {
+  else if (event.command === "openInSuperOTRMenu") {
     var url = safari.application.activeBrowserWindow.activeTab.url;
     var title = safari.application.activeBrowserWindow.activeTab.title;
     if (event.userInfo) {
       title = event.userInfo.selection;
     }
   }
-  else if (event.command === "openLinkInPapers") {
+  else if (event.command === "openLinkInSuperOTR") {
     var url = event.userInfo.href;
     var title = event.userInfo.selection;
   }
-  openURLinPapers(url, title);
+  openURLinSuperOTR(url, title);
 }
 
 
-function openURLinPapers(url, title) {
-  var papersURL = 'papers://url/' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title);
-  safari.application.activeBrowserWindow.activeTab.url = papersURL;
+function openURLinSuperOTR(url, title) {
+  var superotrURL = 'otr://'+url//url/' + encodeURIComponent(url)// + '&title=' + encodeURIComponent(title);
+  safari.application.activeBrowserWindow.activeTab.url = superotrURL;
 }
 
 
 function validateCommand(event) {
-  if (event.command === "openInPapers") {
+  if (event.command === "openInSuperOTR") {
     event.target.disabled = !event.target.browserWindow.activeTab.url;
   }
-  if (event.command === "openInPapersMenu") {
+  if (event.command === "openInSuperOTRMenu") {
     event.target.disabled = event.userInfo.hasLink;
   }
-  if (event.command === "openLinkInPapers") {
+  if (event.command === "openLinkInSuperOTR") {
     event.target.disabled = !event.userInfo.hasLink;
   }
 }
 
 
 function handleMessage(event) {
-  if (event.name == 'openInPapersViaKeyboardShortcut') {
+  if (event.name == 'openInSuperOTRViaKeyboardShortcut') {
     url = event.target.browserWindow.activeTab.url;
     title = event.target.browserWindow.activeTab.title;
 
     if (event.message) {
       title = event.message;
     }
-    openURLinPapers(url, title);
+    openURLinSuperOTR(url, title);
   }
   if (event.name == 'getSettingValue') {
     var value = safari.extension.settings.getItem(event.message);
